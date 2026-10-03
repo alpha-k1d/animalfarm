@@ -1,0 +1,24 @@
+services:
+  # Render Static Site (Recommended: Fast Global CDN, Free Tier, Zero Server Maintenance)
+  - type: web
+    name: animal-farm-ghana
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    routes:
+      # SPA Rewrite Rule: redirects all deep links to index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: VITE_PAYSTACK_PUBLIC_KEY
+        value: pk_live_953c8b729d6aa6caacfe87d1083ce5a628ae5bcb
