@@ -1,0 +1,168 @@
+/* assets/css/style.css - Animal Farm Ghana Custom Styling */
+
+:root {
+    --farm-primary: #198754;
+    --farm-primary-dark: #146c43;
+    --farm-secondary: #ffc107;
+    --farm-accent: #0d6efd;
+    --farm-dark: #1b2e20;
+    --farm-light: #f8faf8;
+    --farm-border: #e2e8f0;
+    --farm-card-bg: #ffffff;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f4;
+    color: #2d3748;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.bg-farm-primary {
+    background-color: var(--farm-primary) !important;
+}
+
+.text-farm-primary {
+    color: var(--farm-primary) !important;
+}
+
+.btn-farm-primary {
+    background-color: var(--farm-primary);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-farm-primary:hover {
+    background-color: var(--farm-primary-dark);
+    color: #ffffff;
+}
+
+/* Navbar styling */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(20, 108, 67, 0.95), rgba(27, 46, 32, 0.92)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1600&q=80') center/cover no-repeat;
+    color: #ffffff;
+    padding: 90px 0;
+}
+
+/* Cards & Containers */
+.card {
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Metric Display Cards */
+.metric-card {
+    border-left: 4px solid var(--farm-primary);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.metric-card.warning {
+    border-left-color: var(--farm-secondary);
+}
+
+.metric-card.info {
+    border-left-color: var(--farm-accent);
+}
+
+.metric-card.danger {
+    border-left-color: #dc3545;
+}
+
+/* Ghana Cedi badge */
+.badge-cedi {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* Bottom Navigation Bar for Mobile */
+.mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    z-index: 1040;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.mobile-bottom-nav .nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 8px 4px;
+}
+
+.mobile-bottom-nav .nav-link {
+    color: #718096;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+}
+
+.mobile-bottom-nav .nav-link.active {
+    color: var(--farm-primary);
+    font-weight: 700;
+}
+
+.mobile-bottom-nav .nav-icon {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        display: flex;
+    }
+    body {
+        padding-bottom: 70px;
+    }
+}
+
+/* Table styling */
+.table th {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #718096;
+    background-color: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* Category Badge */
+.category-pill {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background-color: #edf2f7;
+    color: #4a5568;
+}
