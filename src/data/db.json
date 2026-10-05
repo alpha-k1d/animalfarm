@@ -1,0 +1,21 @@
+{
+  "users": [],
+  "submissions": [],
+  "withdrawals": [],
+  "supportTickets": [],
+  "callLogs": [],
+  "transactions": [],
+  "enrolledPackages": [],
+  "events": [
+    {
+      "id": "evt-1791125995999-ei35",
+      "type": "test_purged",
+      "timestamp": 1791125995999,
+      "data": {
+        "purgedAt": "2026-10-04T14:59:55.999Z",
+        "purgedCount": 0
+      }
+    }
+  ],
+  "resetTokens": {}
+}
