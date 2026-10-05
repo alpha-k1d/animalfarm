@@ -1,0 +1,7 @@
+{
+  "name": "Animal Farm Ghana",
+  "description": "Official Agricultural Task Verification, Cooperative Farm Sponsorship, and Mobile Money Outgrower Settlement Platform for Ghana.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
